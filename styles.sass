@@ -1,0 +1,68 @@
+$primary-color: #30262d
+$second-color: #904446
+$third-color: #fffcfd
+$font: 'Montserrat Alternates', sans-serif
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap')
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  background-color: $primary-color
+  font-family: $font
+
+a, button
+  text-decoration: none
+  border: none
+
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 20px 10%
+  background-color: $second-color
+
+.logo
+  text-decoration: none
+  cursor: pointer
+
+.menu-links
+  text-transform: uppercase
+  list-style: none
+  background-color: $second-color
+  li
+    display: inline-block
+    padding: 0 20px
+    background-color: inherit
+    font-weight: 700
+    a
+      transition: all 0.3s ease 0s
+      color: $primary-color
+      background-color: inherit
+    a:hover
+      color: $third-color
+
+.authorization
+  background-color: $second-color
+  button
+    margin: 0 10px
+    padding: 9px 20px
+    border-radius: 20px
+    cursor: pointer
+    background-color: $primary-color
+    color: $second-color
+    transition: all 0.3s ease 0s
+  button:hover
+    opacity: 0.6
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+
+.main
+  flex: 1 0 auto
+
+.footer
+  flex: 0 0 auto
