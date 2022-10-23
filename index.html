@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
     <link rel="stylesheet" href="build/stylesheets/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js" integrity="sha512-3dWmvVq5KDeVcTwONnv+MKNPQphfE4MjRbIMUP0vtWW6wW1zwEcOZGajKeWo1qQIdBKfwLTaIHRBVJB+8j/ZUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Title</title>
 </head>
 <body>
@@ -26,12 +28,101 @@
         </div>
     </header>
 
-    <div class="wrapper">
-        <main class="main">
-            <footer class="footer">
+    <div class="cd-user-modal">
+        <div class="cd-user-modal-container">
+            <ul class="cd-switcher">
+                <li><a href="#">Sign in</a></li>
+                <li><a href="#">New account</a></li>
+            </ul>
 
-            </footer>
-        </main>
+            <div id="cd-login">
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">Email</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="Email">
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="password" placeholder="Password">
+                        <a href="#" class="show-password">Show</a>
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="login">
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message"><a href="#">Forgot your password?</a></p>
+            </div>
+
+            <div id="cd-signup">
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">Email</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="Email">
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="password" placeholder="Password">
+                        <a href="#" class="show-password">Show</a>
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#">Terms</a></label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+            </div>
+
+            <div id="cd-reset-password">
+                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">Email</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="Email">
+                        <span class="cd-error-message">Required!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message"><a href="#">Back to login</a></p>
+            </div>
+            <a href="#" class="cd-close-form">Close</a>
+        </div>
     </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            <p>Copyright @ 2022 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/placeholders.min.js"></script> <!-- polyfill for the HTML5 placeholder attribute -->
+    <script src="js/main.js"></script> <!-- Resource JavaScript -->
 </body>
 </html>

@@ -1,78 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap");
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: #30262d;
-  font-family: "Montserrat Alternates", sans-serif;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 22 |   @include box-sizing(border-box)
+ *    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   styles.sass 22:3  root stylesheet */
 
-a, button {
-  text-decoration: none;
-  border: none;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 22 \2502    @include box-sizing(border-box)\d\a    \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   styles.sass 22:3  root stylesheet";
 }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: #904446;
-}
-
-.logo {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.menu-links {
-  text-transform: uppercase;
-  list-style: none;
-  background-color: #904446;
-}
-.menu-links li {
-  display: inline-block;
-  padding: 0 20px;
-  background-color: inherit;
-  font-weight: 700;
-}
-.menu-links li a {
-  transition: all 0.3s ease 0s;
-  color: #30262d;
-  background-color: inherit;
-}
-.menu-links li a:hover {
-  color: #fffcfd;
-}
-
-.authorization {
-  background-color: #904446;
-}
-.authorization button {
-  margin: 0 10px;
-  padding: 9px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #30262d;
-  color: #904446;
-  transition: all 0.3s ease 0s;
-}
-.authorization button:hover {
-  opacity: 0.6;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-.main {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex: 0 0 auto;
-}
-
-/*# sourceMappingURL=styles.css.map */

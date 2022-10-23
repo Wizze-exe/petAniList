@@ -4,12 +4,34 @@ $third-color: #fffcfd
 $font: 'Montserrat Alternates', sans-serif
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap')
+@import bourbon/bourbon
 
-*
-  box-sizing: border-box
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return  $remSize * 1 rem
+
+@mixin center($xy:xy)
+  @if $xy == xy
+    left: 50%
+    top: 50%
+    bottom: auto
+    right: auto
+    @include transform(translateX(-50%) translateY(-50%))
+
+*, *::after, *::before
+  @include box-sizing(border-box)
   margin: 0
   padding: 0
   background-color: $primary-color
+  font-family: $font
+
+html
+  font-size: 62.5%
+
+body
+  font-size: 1.6rem
+  width: 100%
+  height: 100vh
   font-family: $font
 
 a, button
@@ -45,6 +67,7 @@ a, button
 
 .authorization
   background-color: $second-color
+  margin: 0 -50px
   button
     margin: 0 10px
     padding: 9px 20px
@@ -56,13 +79,17 @@ a, button
   button:hover
     opacity: 0.6
 
-.wrapper
-  display: flex
-  flex-direction: column
-  min-height: 100%
-
-.main
-  flex: 1 0 auto
-
 .footer
-  flex: 0 0 auto
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  margin-top: 30px
+  margin-bottom: 0
+  background-color: $second-color
+
+.copyright
+  background-color: inherit
+  p
+    background-color: inherit
+    padding: 10px
+    color: $primary-color
